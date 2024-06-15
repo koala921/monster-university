@@ -1,0 +1,256 @@
+:root {
+    --mu-beige: #ebcaa8;
+    --mu-green: #00a86b;
+    --mu-purple: #a020f0;
+    --mu-yellow: #ffd700;
+    --mu-light-blue: #add8e6;
+    --mu-white: #ffffff;
+    --mu-black: #000000;
+    --mu-blue: #0073e6;
+    --mu-light-blue-2: #5cd3ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, var(--mu-blue), var(--mu-light-blue-2));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header, footer {
+    background-color: var(--mu-beige);
+    color: var(--mu-black);
+    padding: 1rem;
+    text-align: center;
+}
+
+header a, footer a {
+    color: var(--mu-black);
+    text-decoration: none;
+}
+
+header a:hover, footer a:hover {
+    color: var(--mu-yellow);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--mu-beige);
+    border-bottom: 2px solid var(--mu-black);
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+#quiz-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    background: var(--mu-white, #fff);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-container button {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--mu-blue);
+    color: var(--mu-white);
+    transition: background-color 0.3s ease;
+}
+
+.btn-container button:hover {
+    background-color: var(--mu-light-blue-2);
+}
+
+#question-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: var(--mu-beige);
+    border-top: 2px solid var(--mu-black);
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+h2 {
+    color: #1d3557;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .btn-container button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 0.5rem 1rem;
+    }
+    
+    #title {
+        font-size: 1.5rem;
+    }
+
+    .btn-container {
+        gap: 0.5rem;
+    }
+
+    .btn-container button {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    #quiz-container {
+        padding: 1rem;
+    }
+    #result-gif {
+        padding: 0.5rem;
+    }
+
+    #result-gif img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+}
+
+#navbarNav {
+    padding-left: 90%;
+}
+
+.nav-link{
+    padding:auto;
+}
+#instagram{
+    width: 60px;
+    height: 60px;
+    margin:auto;
+    
+}
+#Facebook{
+    width: 60px;
+    height: 60px;
+    margin:auto;
+}
+#boscocinema{
+    width:300px;
+    height: 90px;
+    margin: auto;
+    position: flex;
+}
+h2{
+    color: #1d3557;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
